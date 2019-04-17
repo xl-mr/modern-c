@@ -11,7 +11,7 @@ int main()
 
     for (farth = high; farth >= low; farth -= step) 
     {
-        cesius = 5.0 / 9 * (farth - 32);
+        cesius = 5.0f / 9 * (farth - 32);
         printf("%3.0f %6.1f\n", farth, cesius);
     }
 
