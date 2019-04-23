@@ -11,6 +11,10 @@ int main()
     printf("%d\n", (-i) % j);
     printf("%d\n", i % (-j));
 
+    int x;
+    scanf("%d", &x);
+    printf("%d\n", x);
+
 
     return 0;
 }
