@@ -8,7 +8,8 @@ int main()
     printf("Enter the first 12 digits of a EAN: ");
     for (i = 0; i < 12; i++)
     {
-        scanf("%1d", &num[i]);
+        //scanf("%1d", &num[i]);
+        scanf("%1d", num + i);
     }
 
     odd = 0;
