@@ -1,1 +1,1 @@
-CFLAGS=-g -W -Wall -Werror
+CFLAGS=-g -W -Wall -Werror -DDEBUG
