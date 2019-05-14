@@ -6,8 +6,10 @@ int main()
     printf("short int byte num %lu\n", sizeof(short));
     printf("int byte num %lu\n", sizeof(int));
     printf("long int byte num %lu\n", sizeof(long));
+    printf("long long int byte num %lu\n", sizeof(long long));
     printf("float byte num %lu\n", sizeof(float));
     printf("double byte num %lu\n", sizeof(double));
+    printf("long double byte num %lu\n", sizeof(long double));
 
 
     float farth, celsius;

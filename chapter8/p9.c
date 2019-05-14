@@ -57,7 +57,7 @@ int main(void)
                 #ifndef DEBUG
                     printf("i j not valid ");
                 #endif
-            } else if ((i >= 0 && i < N) && (j >= 0 && j < N) && (arr[i][j] != '.')) {
+            } else if (arr[i][j] != '.') {
                 switch (dir) {
                     case 0:
                         i++;
