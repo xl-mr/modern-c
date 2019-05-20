@@ -3,6 +3,7 @@
 char *
 getStr(char *str)
 {
+    printf("%s\n", str);
     return str;
 }
 
