@@ -29,7 +29,7 @@ int main(void)
         read_guesses(secret_number);
 
         printf("Play again? (Y/N)\n");
-        scanf("%c", &command);
+        scanf(" %c", &command);
         printf("\n");
     } while (tolower(command) == 'y');
 

@@ -28,8 +28,10 @@ int main(void)
         read_guesses();
 
         printf("Play again? (Y/N)\n");
-        scanf("%c", &command);
+        scanf(" %c", &command);
         printf("\n");
+
+        //printf("%d\n", command);
     } while (tolower(command) == 'y');
 
     return 0;
