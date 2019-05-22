@@ -48,22 +48,44 @@ int pop(void)
 }
 
 void read_expr(void) {
+    int i, j;
     char ch;
-    printf("Enter an RPN expression:");
     
+    i = 0;
     do {
+        if (i == 0) {
+            printf("Enter an RPN expression:");
+        }
+        i++;
         scanf(" %c", &ch);       
+
+        for (j = 0; j < STACK_SIZE; j++) {
+            if (stack[j] != 0) {
+                printf("%d ", stack[j]);
+            }
+        }
+        printf("\n");
         
-        if (isalnum(ch)) {
-            push(ch);
-        } else if (ch == '*' || ch == '/' | ch == '+' || ch == '-') {
-                   
+        if (ch >= '0' && ch <= '9') {
+            push(ch - '0');
+        } else if (ch == '*' ) {                
+            push(pop() * pop());
+        } else if (ch == '=') {
+            i = 0;
+            printf("value of expression: %d\n", pop());
+        } else if (ch == '/') {
+            push(pop() / pop());
+        } else if (ch == '+') {
+            push(pop() + pop());
+        } else if (ch == '-') {
+            push(pop() - pop());
         }
     } while (ch != 'q');   
 }
     
 int main(void)
 {
+    read_expr();
 
-   return 0;
+    return 0;
 }
