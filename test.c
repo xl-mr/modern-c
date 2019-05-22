@@ -2,8 +2,9 @@
 
 int main()
 {
-    int v = 960;
-    printf("%d\n", v / 166);
+    int arr[] = {2,3,4,5};
+
+    printf("%d\n", arr[0]);
 
     return 0;
 }
