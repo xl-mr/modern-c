@@ -7,6 +7,7 @@
 int main(void)
 {
     int a[ROWS][COLS], i, j, *p;
+    int (*b)[COLS];
 
     for (i = 0; i < ROWS; i++) {
         for (j = 0; j < COLS; j++) {
@@ -46,6 +47,30 @@ int main(void)
         printf("\n");
     }
 
+    for (p = a[0]; p < a[0] + ROWS * COLS; p++) {
+        *p = 2;
+    }
+
+    printf("four: \n");
+    for (i = 0; i < ROWS; i++) {
+        for (j = 0; j < COLS; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i = 0; i < COLS; i++) {
+        for (b = a; b < a + ROWS; b++) {
+            (*b)[i] = 3;
+        }
+    }
+    printf("five: \n");
+    for (i = 0; i < ROWS; i++) {
+        for (j = 0; j < COLS; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
