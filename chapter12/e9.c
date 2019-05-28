@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-double inner_product(double *a, double *b, int n);
+double inner_product(const double *a, const double *b, int n);
 
 int main(void)
 {
@@ -12,9 +12,10 @@ int main(void)
     return 0;
 }
 
-double inner_product(double *a, double *b, int n)
+double inner_product(const double *a, const double *b, int n)
 {
-    double sum, *p, *q;
+    double sum; 
+    const double *p, *q;
 
     sum = 0.00;
     for (p = a, q = b; p < a + n && q < b + n; p++, q++) {
