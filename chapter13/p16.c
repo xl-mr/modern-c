@@ -10,12 +10,12 @@ void reverse(char *message)
     start = message;
     end = message + strlen(message) - 1;
     
-    while (*start != *end) {
-        printf("before start = %c, end = %c \n", *start, *end);
+    while (*start != *end && start < (message + strlen(message) / 2)) {
+        //printf("before start = %c, end = %c \n", *start, *end);
         temp = *start;
         *start = *end;
         *end = temp;
-        printf("swap after start = %c, end = %c \n", *start, *end);
+        //printf("swap after start = %c, end = %c \n", *start, *end);
         start++;
         end--;
     }
