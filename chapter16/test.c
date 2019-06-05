@@ -43,9 +43,26 @@ struct part test(void)
     return part;
 }
 
+void test2(struct part **part)
+{
+    printf("test1 func part = %p\n", part);
+    printf("test1 func *part = %p\n", *part);
+
+    (*part)->num = 10;
+    (*part)->on_hand = 20;
+    strcpy((*part)->name, "hello world! 1111");
+}
+
 int main(void)
 {
     struct part part = test();
+    struct part *test1 = &part;
+
+    printf("&test1 = %p\n", &test1);
+    printf("test1 = %p\n", test1);
+
+    test2(&test1);
+
 
     printf("part.num = %d\n", part.num);
     printf("part.name = %s\n", part.name);
