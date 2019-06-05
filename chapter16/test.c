@@ -61,6 +61,8 @@ int main(void)
     struct part part = test();
     struct part *test1 = &part;
 
+    printf("%02d\n", 10);
+
     ptr_part test11 = test1;
 
     printf("&test1 = %p\n", &test1);
