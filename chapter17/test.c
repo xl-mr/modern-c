@@ -2,10 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+struct book {
+    int num;
+    char name[10];
+} book = {1, "book"};
+
 char *concat(const char *s1, const char *s2);
 
 int main(void)
 {
+    printf("book addr = %p\n", &book);
+    printf("book.num addr = %p\n", &book.num);
+    printf("book.name addr = %p\n", book.name);
+
     //printf("%s\n", concat("abc", "def"));
     int *a, i, n = 10;
     //a = (int *)malloc((unsigned long)n * sizeof(int));
