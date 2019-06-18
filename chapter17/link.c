@@ -63,7 +63,7 @@ struct node *delete_from_list(struct node *list, int n)
 {
     struct node *cur, *prev;
 
-    for (cur = list, prev = NULL; cur != NULL && cur->value == n; prev = cur, cur = cur->next) {
+    for (cur = list, prev = NULL; cur != NULL && cur->value != n; prev = cur, cur = cur->next) {
         ;
     }
 
