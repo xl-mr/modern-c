@@ -2,7 +2,7 @@
 #define QUEUE_H
 
 typedef int dataType;
-typedef struct queueType *queue;
+typedef struct queue_type *queue;
 
 void push(queue q, dataType e);
 dataType pop(queue q);
