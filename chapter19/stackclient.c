@@ -6,8 +6,8 @@ int main(void)
     Stack s1, s2;
     int n;
 
-    s1 = create(100);
-    s2 = create(100);
+    s1 = create(1);
+    s2 = create(1);
 
     push(s1, 1);
     push(s1, 2);
