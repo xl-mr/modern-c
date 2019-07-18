@@ -5,6 +5,7 @@ typedef int dataType;
 typedef struct queue_type *queue;
 
 queue create(void);
+//queue create(int n);
 void push(queue q, dataType e);
 dataType pop(queue q);
 dataType getHead(queue q);
