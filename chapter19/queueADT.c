@@ -59,3 +59,21 @@ void destroy(queue q)
         free(q);
     }
 }
+
+int length(queue q)
+{
+    return q != NULL ? q->size : 0;
+}
+
+void print_q(queue q)
+{
+    int i;
+    
+    for (i = q->head_pos; i < q->rear_pos; i++) {
+        printf("%d ", q->data[i]);
+    }
+    printf("\n");
+
+    printf("queue head pos = %d, rear pos = %d\n", q->head_pos, q->rear_pos);
+    
+}

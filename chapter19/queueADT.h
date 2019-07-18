@@ -10,5 +10,7 @@ dataType pop(queue q);
 dataType getHead(queue q);
 dataType getEnd(queue q);
 void destroy(queue q);
+int length(queue q);
+void print_q(queue q);
 
 #endif
